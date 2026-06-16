@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlyrjv71sno0t"]
+
+[ext_resource type="Script" uid="uid://dxvoyye6gh1pd" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://novymumi51u1" path="res://assets/sprites/player_ship.png" id="2_qhqgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqkch"]
+radius = 18.0
+
+[node name="Player" type="Area2D" unique_id=822872186]
+script = ExtResource("1_g2els")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=483830039]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_qhqgy")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="." unique_id=1557638961]
+shape = SubResource("CircleShape2D_dqkch")
