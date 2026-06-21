@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://q7xd6tdfixfd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.2716998, 0.3133042, 0.38109186, 0.34)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5074483, 0.9023145, 1, 0.379)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 5
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 5
+
+[node name="HUD" type="CanvasLayer" unique_id=1060010380]
+
+[node name="RootControl" type="Control" parent="." unique_id=261108430]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 160.0
+offset_bottom = 27.0
+
+[node name="TopPanel" type="PanelContainer" parent="RootControl" unique_id=1252791255]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 264.0
+offset_bottom = 60.0
+offset_transform_enabled = true
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="Stats" type="HBoxContainer" parent="RootControl/TopPanel" unique_id=571139159]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(12, 0)
+theme_override_constants/separation = 18
+
+[node name="ScoreLable" type="Label" parent="RootControl/TopPanel/Stats" unique_id=1044109573]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Score: 0"
+
+[node name="TimeLabel" type="Label" parent="RootControl/TopPanel/Stats" unique_id=1107280475]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Time: 30"
+
+[node name="ControlsHintLabel" type="Label" parent="RootControl" unique_id=386178769]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 600.0
+offset_transform_pivot = Vector2(-2.215, 0)
+theme_override_colors/font_color = Color(0.91775256, 0.9452769, 0.9822071, 0.62)
+text = "Move: Arrow Keys / WASD | Restart: R"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="ControlsHintLabel2" type="Label" parent="RootControl" unique_id=623374975]
+visible = false
+layout_mode = 1
+offset_right = 800.0
+offset_bottom = 600.0
+offset_transform_pivot = Vector2(-2.215, 0)
+theme_override_colors/font_color = Color(0.91775256, 0.9452769, 0.9822071, 0.62)
+theme_override_font_sizes/font_size = 32
+text = "Game Over"
+horizontal_alignment = 1
+vertical_alignment = 1
