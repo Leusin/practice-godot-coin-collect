@@ -2,10 +2,10 @@ class_name HUD
 extends CanvasLayer
 
 # 라벨 노드 가져오기	
-@onready var score_label: Label = $RootControl/TopPanel/Stats/ScoreLabel
-@onready var time_label: Label = $RootControl/TopPanel/Stats/TimeLabel
-@onready var controls_hint_label: Label = $RootControl/ControlsHintLabel
-@onready var game_over_label: Label = $RootControl/GameOverLabel
+@onready var score_label: Label = $TopPanel/Stats/ScoreLabel
+@onready var time_label: Label = $TopPanel/Stats/TimeLabel
+@onready var controls_hint_label: Label = $ControlsHintLabel
+@onready var game_over_label: Label = $GameOverLabel
 
 # 점수 애니메이션 변수
 var score_tween: Tween
@@ -20,10 +20,9 @@ func reset(start_time: float) -> void:
 	controls_hint_label.show()
 	game_over_label.hide()
 
-
 func update_score(score: int) -> void:
 	score_label.text = "Score: %d" % score
-	
+
 	
 func update_time(time_left: float) -> void:
 	time_label.text = "Time: %d" % ceili(time_left)

@@ -2,11 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dlyrjv71sno0t" path="res://scenes/player.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://q7xd6tdfixfd" path="res://scenes/ui/hud.tscn" id="1_sugp2"]
+[ext_resource type="Script" uid="uid://c2q7pg6eoi2be" path="res://scripts/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://bga8jhf4hiohc" path="res://scenes/coin.tscn" id="2_0wfyh"]
 [ext_resource type="AudioStream" uid="uid://lu2vwfwe5ew2" path="res://assets/audio/pickup.wav" id="3_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://cbvw17xyl3sc4" path="res://assets/audio/game_over.wav" id="4_tefeu"]
 
 [node name="Main" type="Node2D" unique_id=1207009173]
+script = ExtResource("1_tefeu")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1264538132]
 offset_right = 800.0
