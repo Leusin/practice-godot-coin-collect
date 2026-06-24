@@ -1,12 +1,76 @@
 [gd_scene format=3 uid="uid://dwq8vfygbhb0w"]
 
 [ext_resource type="PackedScene" uid="uid://dlyrjv71sno0t" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://q7xd6tdfixfd" path="res://scenes/ui/hud.tscn" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://bga8jhf4hiohc" path="res://scenes/coin.tscn" id="2_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://lu2vwfwe5ew2" path="res://assets/audio/pickup.wav" id="3_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://cbvw17xyl3sc4" path="res://assets/audio/game_over.wav" id="4_tefeu"]
 
 [node name="Main" type="Node2D" unique_id=1207009173]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1264538132]
+offset_right = 800.0
+offset_bottom = 600.0
+color = Color(0.29337206, 0.33183005, 0.4100209, 1)
+
+[node name="GridLineV1" type="ColorRect" parent="." unique_id=918711570]
+offset_top = 150.0
+offset_right = 800.0
+offset_bottom = 152.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV2" type="ColorRect" parent="." unique_id=1221958832]
+offset_top = 300.0
+offset_right = 800.0
+offset_bottom = 302.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV3" type="ColorRect" parent="." unique_id=1511935502]
+offset_top = 450.0
+offset_right = 800.0
+offset_bottom = 452.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV4" type="ColorRect" parent="." unique_id=802608684]
+offset_left = 160.0
+offset_right = 162.0
+offset_bottom = 600.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV5" type="ColorRect" parent="." unique_id=525752524]
+offset_left = 320.0
+offset_right = 322.0
+offset_bottom = 600.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV6" type="ColorRect" parent="." unique_id=604114985]
+offset_left = 480.0
+offset_right = 482.0
+offset_bottom = 600.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
+
+[node name="GridLineV7" type="ColorRect" parent="." unique_id=954049517]
+offset_left = 640.0
+offset_right = 642.0
+offset_bottom = 600.0
+color = Color(0.3491902, 0.39588127, 0.47427702, 1)
 
 [node name="Player" parent="." unique_id=822872186 instance=ExtResource("1_o5qli")]
 position = Vector2(400, 300)
 
 [node name="Coin" parent="." unique_id=780662978 instance=ExtResource("2_0wfyh")]
-position = Vector2(416, 214)
+position = Vector2(160, 150)
+
+[node name="GameTimer" type="Timer" parent="." unique_id=475213054]
+wait_time = 30.0
+one_shot = true
+
+[node name="PickupAudio" type="AudioStreamPlayer2D" parent="." unique_id=909085622]
+stream = ExtResource("3_tbgi4")
+volume_db = -8.0
+
+[node name="GameOverAudio" type="AudioStreamPlayer2D" parent="." unique_id=833226734]
+stream = ExtResource("4_tefeu")
+volume_db = -10.0
+
+[node name="HUD" parent="." unique_id=1060010380 instance=ExtResource("1_sugp2")]

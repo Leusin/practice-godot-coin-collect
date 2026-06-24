@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://q7xd6tdfixfd"]
 
+[ext_resource type="Script" uid="uid://dfly6wyjo65im" path="res://scripts/hud.gd" id="1_0mwgc"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
 bg_color = Color(0.2716998, 0.3133042, 0.38109186, 0.34)
 border_width_left = 1
@@ -14,6 +16,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 5
 
 [node name="HUD" type="CanvasLayer" unique_id=1060010380]
+script = ExtResource("1_0mwgc")
 
 [node name="RootControl" type="Control" parent="." unique_id=261108430]
 layout_mode = 3
@@ -48,17 +51,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Time: 30"
 
-[node name="ControlsHintLabel" type="Label" parent="RootControl" unique_id=386178769]
-layout_mode = 0
-offset_right = 800.0
-offset_bottom = 600.0
-offset_transform_pivot = Vector2(-2.215, 0)
-theme_override_colors/font_color = Color(0.91775256, 0.9452769, 0.9822071, 0.62)
-text = "Move: Arrow Keys / WASD | Restart: R"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="ControlsHintLabel2" type="Label" parent="RootControl" unique_id=623374975]
+[node name="GameOverLabel" type="Label" parent="RootControl" unique_id=623374975]
 visible = false
 layout_mode = 1
 offset_right = 800.0
@@ -69,3 +62,13 @@ theme_override_font_sizes/font_size = 32
 text = "Game Over"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="ControlsHintLabel" type="Label" parent="RootControl" unique_id=386178769]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 600.0
+offset_transform_pivot = Vector2(-2.215, 0)
+theme_override_colors/font_color = Color(0.91775256, 0.9452769, 0.9822071, 0.62)
+text = "Move: Arrow Keys / WASD | Restart: R"
+horizontal_alignment = 1
+vertical_alignment = 2
